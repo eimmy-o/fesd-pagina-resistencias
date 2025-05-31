@@ -7,16 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="circuito-section">
-        <div class="circuito">
-            <h1>Circuito Eléctrico</h1>
-            <img src="circuito.jpg" alt="Circuito Eléctrico">
+    <nav id = "desktop-nav"> 
+        <div class = "fesd"> FESD Tarea </div>
+        <div>
+            <ul class = "nav-links">
+                <li><a href="#circuito">Circuito</a></li>
+                <li><a href="#datos">Datos</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <section id="circuito">
+        <div class="circuito">
+            <h1 class="title">Circuito Eléctrico</h1>
+            <div class="img-container">
+                <img src="imgs/circuito.png" alt="Circuito Eléctrico" class="img-circuito">
+            </div>
+        </div>
+        <img src="imgs/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#datos'"/>
     </section>
     
-    <section id="resistencias-section">
+    <section id="datos">
         <div class="resistencias">
-            <h2>Ingrese el valor de cada resistencia:</h2>
+            <h2 class="subtitle">Ingrese el valor de cada resistencia:</h2>
             <form id="resistenciasForm">
                 <div class="resistencia">
                     <label for="R1">R1:</label>
@@ -55,12 +69,29 @@
                     <input type="number" id="R9" name="R9" required>
                 </div>
                 <div class="btn-container">
-                    <button class="btn btn-color-1" type="submit">Guardar Valores</button>
+                    <button class="btn btn-color-1" type="submit">Calcular</button>
                 </div>
                 
             </form>
         </div>
+        <img src="imgs/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#resultados'"/>
     </section>
-    
+
+    <section id="resultados">
+
+    </section>
+    <footer>
+        <nav id = "desktop-nav"> 
+            <div class = "fesd"> FESD Tarea </div>
+            <div>
+                <ul class = "nav-links">
+                    <li><a href="#circuito">Circuito</a></li>
+                    <li><a href="#datos">Datos</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Integrantes: Ochoa Eimmy, Burgos Juliana, Andrade Mateo, Carrera Joseph</p>
+    </footer>
 </body>
 </html>

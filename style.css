@@ -16,11 +16,66 @@ body {
 }
 
 section {
-   padding-top: 4vh ; /* espacio entre la parte superior de la seccion y el contenido */
-   height: 96vh ; /* altura de la seccion */
-   margin: 0 10rem; /* margen de la seccion */
-   box-sizing: border-box ; /* incluye el padding y el margen en el tamaño de la seccion */
-   min-height: fit-content ; /* altura minima de la seccion */
+   padding-top: 4vh ; 
+   height: 96vh ; 
+   margin: 0 10rem; 
+   box-sizing: border-box ; 
+   min-height: fit-content ; 
+}
+
+a, .btn {
+    transition: all 300ms ease ; 
+}
+
+nav , .nav-links{
+    display: flex ; 
+}
+
+nav {
+    justify-content: space-around; 
+    height: 17vh ; 
+    align-items: center ; 
+}
+
+.nav-links {
+    gap: 2rem ; 
+    list-style: none ; 
+    font-size: 1.5rem ; 
+}
+
+a {
+    color: black ; 
+    text-decoration: none ; 
+    text-decoration-color: white ; /
+}
+
+
+a:hover {
+    color: grey ; 
+    text-decoration: underline ; 
+    text-underline-offset: 1rem ; 
+    text-decoration-color: rgb(181, 181, 181) ; 
+}
+
+.fesd { 
+    font-size: 2rem ; 
+}
+
+.title {
+   font-size: 3rem ; 
+   text-align: center ; 
+   margin-bottom: 2rem ;
+}
+
+.subtitle {
+   color: rgb(85, 85, 85) ; 
+   font-weight: 600 ; 
+   font-size: 1.75rem ; 
+   margin-bottom: 2rem ; 
+}
+
+#circuito {
+   position: relative ; 
 }
 
 .circuito {
@@ -28,8 +83,23 @@ section {
 }
 
 .circuito img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
+}
+
+.icon {
+   cursor: pointer ; 
+   height: 2rem ; 
+}
+
+.arrow {
+   position: absolute ; 
+   right: -5rem ; 
+   bottom: 2.5rem ; 
+}
+
+#datos {
+    position: relative ;
 }
 
 .resistencias {
@@ -66,32 +136,36 @@ button {
 }
 
 .btn-container {
-   display: flex ; /* hace que los elementos se distribuyan en una fila */
-   justify-content: center ; /* alinea los elementos al centro */
-   gap: 1rem ; /* espacio entre los elementos */
+   display: flex ; 
+   justify-content: center ; 
+   gap: 1rem ; 
 }
 
 .btn {
-   font-weight: 600 ; /* peso de la fuente */
-   transition: all 300ms ease ; /* hace que los elementos se muevan suavemente */
-   padding: 1rem ; /* espacio entre el texto y el boton */
-   width: 10rem ; /* ancho del boton */
-   border-radius: 2rem ; /* bordes redondeados del boton */
+   font-weight: 600 ; 
+   transition: all 300ms ease ; 
+   padding: 1rem ; 
+   width: 10rem ; 
+   border-radius: 2rem ; 
 }
 
 .btn-color-1 {
-   border: rgb(53, 53, 53) 0.1rem solid ; /* borde del boton */
+   border: rgb(53, 53, 53) 0.1rem solid ; 
 }
 
 .btn-color-1:hover {
-   cursor: pointer ; /* cambia el cursor al pasar el mouse por encima del boton */
+   cursor: pointer ; 
 }
 
 .btn-color-1 {
-   background: rgb(53, 53, 53) ; /* color de fondo del boton */
-   color: white ; /* color del texto del boton */
+   background: rgb(53, 53, 53) ; 
+   color: white ; 
 }
 
 .btn-color-1:hover {
-   background: rgb(0, 0, 0) ; /* color de fondo del boton */
+   background: rgb(0, 0, 0) ; 
+}
+
+p {
+    color : rgb(85, 85, 85);
 }
