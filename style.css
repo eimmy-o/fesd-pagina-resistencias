@@ -15,13 +15,7 @@ body {
     margin: 20px;
 }
 
-section {
-   padding-top: 4vh ; 
-   height: 96vh ; 
-   margin: 0 10rem; 
-   box-sizing: border-box ; 
-   min-height: fit-content ; 
-}
+
 
 a, .btn {
     transition: all 300ms ease ; 
@@ -74,16 +68,13 @@ a:hover {
    margin-bottom: 2rem ; 
 }
 
-#circuito {
-   position: relative ; 
-}
 
 .circuito {
     text-align: center;
 }
 
 .circuito img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -97,6 +88,18 @@ a:hover {
    right: -5rem ; 
    bottom: 2.5rem ; 
 }
+
+.container {
+  display: flex;
+  justify-content: space-between; /* o center, o start, según lo que necesites */
+  align-items: flex-start; 
+}
+
+#circuito, #datos {
+  flex: 1; 
+  box-sizing: border-box;
+}
+
 
 #datos {
     position: relative ;
@@ -170,4 +173,13 @@ button {
 
 p {
     color : rgb(85, 85, 85);
+}
+
+section {
+    text-align: center;
+    padding-top: 4vh ; 
+    height: 96vh ; 
+    margin: fit-content ; 
+    box-sizing: border-box ; 
+    min-height: fit-content ; 
 }
