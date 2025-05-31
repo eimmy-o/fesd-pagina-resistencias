@@ -183,3 +183,26 @@ section {
     box-sizing: border-box ; 
     min-height: fit-content ; 
 }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8; 
+    border-top: 1px solid #ddd;
+}
+
+.footer-right a {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    gap: 5px; 
+}
+
+.footer-right img {
+    width: 24px;
+    height: 24px;
+}
+
+
