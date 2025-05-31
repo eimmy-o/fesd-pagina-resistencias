@@ -115,18 +115,20 @@ a:hover {
 
 .resistencia {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
     margin-bottom: 10px;
+    gap: 10px;                /* Espacio entre label y input */
 }
-
 .resistencia label {
-    flex: 1;
+    min-width: 40px;          /* Ajusta para mantener el label alineado */
+    text-align: right;
 }
-
 .resistencia input {
-    flex: 1;
+    width: 150px;              /* Ajusta el ancho del campo de entrada */
     padding: 5px;
 }
+
 
 button {
     display: block;
