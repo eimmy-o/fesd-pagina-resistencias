@@ -105,7 +105,7 @@ a:hover {
     position: relative ;
 }
 
-.resistencias {
+.resistencias , .voltaje {
     margin-top: 20px;
     max-width: 600px;
     margin-left: auto;
@@ -116,22 +116,37 @@ a:hover {
     text-align: center;
 }
 
-.resistencia {
-    display: flex;
-    justify-content: center;  /* Centra horizontalmente */
-    align-items: center;      /* Centra verticalmente */
-    margin-bottom: 10px;
-    gap: 10px;                /* Espacio entre label y input */
+.voltaje h2 {
+    text-align: center;
 }
+
+.resistencia , .voltaje {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    margin-bottom: 10px;
+    gap: 10px;                
+}
+
 .resistencia label {
-    min-width: 40px;          /* Ajusta para mantener el label alineado */
+    min-width: 40px;          
     text-align: right;
 }
+
 .resistencia input {
-    width: 150px;              /* Ajusta el ancho del campo de entrada */
+    width: 150px;              
     padding: 5px;
 }
 
+.voltaje label {
+    min-width: 40px;          
+    text-align: right;
+}
+
+.voltaje input {
+    width: 150px;              
+    padding: 5px;
+}
 
 button {
     display: block;
