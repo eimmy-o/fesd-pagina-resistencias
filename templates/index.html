@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Circuito Eléctrico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="fesd">FESD Tarea</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#circuito">Circuito</a></li>
+                <li><a href="#datos">Datos</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="circuito">
+            <div class="circuito">
+                <h1 class="title">Circuito Eléctrico</h1>
+                <div class="img-container">
+                    <img src="{{ url_for('static', filename='imgs/circuito.png') }}" alt="Circuito Eléctrico" class="img-circuito" />
+                </div>
+            </div>
+        </section>
+
+        <section id="datos">
+            <div class="resistencias">
+                <h2 class="subtitle">Ingrese el valor del voltaje total y cada resistencia:</h2>
+                <form id="resistenciasForm" method="POST" action="/">
+                    <div class="voltaje">
+                        <label for="Vt">Vt:</label>
+                        <input type="number" id="Vt" name="Vt" step="any" required />
+                    </div>
+                    {% for i in range(1, 10) %}
+                    <div class="resistencia">
+                        <label for="R{{ i }}">R{{ i }}:</label>
+                        <input type="number" id="R{{ i }}" name="R{{ i }}" step="any" required />
+                    </div>
+                    {% endfor %}
+                    <div class="btn-container">
+                        <button class="btn btn-color-1" type="submit">Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <section id="resultados">
+        <div class="resultados">
+            <h2 class="subtitle">Resultados</h2>
+            <div class="resultados-container">
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% elif resultado %}
+                    <p><strong>Resistencia equivalente:</strong> {{ resultado | round(2) }} Ω</p>
+                    <p><strong>Intensidad total:</strong> {{ intensidad | round(2) }} A</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <p>Integrantes: Ochoa Eimmy, Burgos Juliana, Andrade Mateo, Carrera Joseph</p>
+        </div>
+        <div class="footer-right">
+            <img src="{{ url_for('static', filename='imgs/github.png') }}" alt="GitHub" width="24" height="24" />
+            <a href="https://github.com/eimmy-o/fesd-pagina-resistencias" target="_blank">Repositorio</a>
+        </div>
+    </footer>
+</body>
+</html>
