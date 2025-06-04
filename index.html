@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Circuito Eléctrico</title>
-    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Circuito</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="fesd">FESD Tarea</div>
+        <div class="logo">Análisis de Circuito</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#circuito">Circuito</a></li>
@@ -18,85 +19,71 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="main-content">
         <section id="circuito">
-            <div class="circuito">
-                <h1 class="title">Circuito Eléctrico</h1>
-                <div class="img-container">
-                    <img src="./imgs/circuito.png" alt="Circuito Eléctrico" class="img-circuito" />
+            <div class="circuito-container">
+                <div class="circuito-interactivo">
+                    <img id="circuito-img" src="imgs/circuito-original.png" alt="Circuito Eléctrico">
+                    
+                    <div class="circuito-input" style="top: -1%; left: 16%;">
+                        <input type="number" id="R1" placeholder="R1 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: -1%; left: 38%;">
+                        <input type="number" id="R2" placeholder="R2 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: 30%; left: 42%;">
+                        <input type="number" id="R3" placeholder="R3 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: 55%; left: 42%;">
+                        <input type="number" id="R4" placeholder="R4 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: 30%; left: 60%;">
+                        <input type="number" id="R5" placeholder="R5 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: -1%; left: 80%;">
+                        <input type="number" id="R6" placeholder="R6 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: 44%; left: 80%;">
+                        <input type="number" id="R7" placeholder="R7 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: 60%; left: 60%;">
+                        <input type="number" id="R8" placeholder="R8 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input" style="top: 70%; left: 80%;">
+                        <input type="number" id="R9" placeholder="R9 (Ω)" min="0">
+                    </div>
+                    <div class="circuito-input voltaje-input" style="top: 47%; left: -6%;">
+                        <input type="number" id="Vt" placeholder="Vt (V)" min="0">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="datos">
-            <div class="resistencias">
-                <h2 class="subtitle">Ingrese el valor del voltaje total y cada resistencia:</h2>
-                <form id="resistenciasForm">
-                    <div class="voltaje">
-                        <label for="Vt">Vt: </label>
-                        <input type="number" id="Vt" name="Vt" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R1">R1:</label>
-                        <input type="number" id="R1" name="R1" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R2">R2:</label>
-                        <input type="number" id="R2" name="R2" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R3">R3:</label>
-                        <input type="number" id="R3" name="R3" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R4">R4:</label>
-                        <input type="number" id="R4" name="R4" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R5">R5:</label>
-                        <input type="number" id="R5" name="R5" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R6">R6:</label>
-                        <input type="number" id="R6" name="R6" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R7">R7:</label>
-                        <input type="number" id="R7" name="R7" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R8">R8:</label>
-                        <input type="number" id="R8" name="R8" required>
-                    </div>
-                    <div class="resistencia">
-                        <label for="R9">R9:</label>
-                        <input type="number" id="R9" name="R9" required>
-                    </div>
-                    <div class="btn-container">
-                        <button class="btn btn-color-1" type="submit" onclick="'./#resultados'">Calcular</button>
-                    </div>
-                </form>
+            <div class="boton-container">
+                <button id="calcularBtn" class="btn-calculate">Calcular Intensidad</button>
+            </div>
+        </section>
+
+        <section id="resultados">
+            <div id="resultados-finales" class="resultados-finales">
+                <p>Los resultados aparecerán aquí después del cálculo</p>
             </div>
         </section>
     </div>
-
-    <section id="resultados">
-        <div class="resultados">
-            <h2 class="subtitle">Resultados</h2>
-            <div class="resultados-container">
-                
-            </div>
-        </div>
-    </section>
 
     <footer>
         <div class="footer-left">
             <p>Integrantes: Ochoa Eimmy, Burgos Juliana, Andrade Mateo, Carrera Joseph</p>
         </div>
         <div class="footer-right">
-            <img src="./imgs/github.png" alt="GitHub" width="24" height="24" />
-            <a href="https://github.com/eimmy-o/fesd-pagina-resistencias" target="_blank">Repositorio</a>
+            <img src="./imgs/github.png" alt="GitHub" width="24" height="24">
+            <a href="https://github.com/eimmy-o/fesd-pagina-resistencias" target="_blank">
+                Repositorio
+            </a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

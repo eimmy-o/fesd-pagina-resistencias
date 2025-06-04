@@ -1,213 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Poppins, sans-serif;
-    margin: 20px;
-}
-
-a,
-.btn {
-    transition: all 300ms ease;
-}
-
-nav,
-.nav-links {
-    display: flex;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background: url('./imgs/wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 nav {
-    justify-content: space-around;
-    height: 17vh;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-links {
+    display: flex;
     gap: 2rem;
     list-style: none;
-    font-size: 1.5rem;
 }
 
 a {
-    color: black;
+    color: #64ffda;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    color: grey;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(181, 181, 181);
+    color: #ffffff;
 }
 
-.fesd {
-    font-size: 2rem;
-}
-
-.title {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.subtitle {
-    color: rgb(85, 85, 85);
+.logo {
+    font-size: 1.5rem;
     font-weight: 600;
-    font-size: 1.75rem;
+    color: #64ffda;
+}
+
+.main-content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.circuito-container {
+    background-color: rgba(10, 25, 47, 0.85);
+    border-radius: 15px;
+    padding: 2rem;
     margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.circuito {
-    text-align: center;
-}
-
-.circuito img {
-    max-width: 100%;
-    height: auto;
-}
-
-.icon {
-    cursor: pointer;
-    height: 2rem;
-}
-
-.arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#circuito,
-#datos {
-    flex: 1;
-    box-sizing: border-box;
-}
-
-#datos {
+.circuito-interactivo {
     position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.resistencias,
-.voltaje {
-    margin-top: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.resistencias h2 {
-    text-align: center;
-}
-
-.voltaje h2 {
-    text-align: center;
-}
-
-.resistencia,
-.voltaje {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    gap: 10px;
-}
-
-.resistencia label {
-    min-width: 40px;
-    text-align: right;
-}
-
-.resistencia input {
-    width: 150px;
-    padding: 5px;
-}
-
-.voltaje label {
-    min-width: 40px;
-    text-align: right;
-}
-
-.voltaje input {
-    width: 150px;
-    padding: 5px;
-}
-
-button {
+.circuito-interactivo img {
+    width: 100%;
+    height: auto;
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 8px;
+    transition: opacity 0.5s ease;
 }
 
-.btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+.circuito-input {
+    position: absolute;
+    width: 80px;
+    transition: opacity 0.5s ease;
 }
 
-.btn {
-    font-weight: 600;
-    transition: all 300ms ease;
-    padding: 1rem;
-    width: 10rem;
-    border-radius: 2rem;
-}
-
-.btn-color-1 {
-    border: rgb(53, 53, 53) 0.1rem solid;
-    background: rgb(53, 53, 53);
+.circuito-input input {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: rgba(100, 255, 218, 0.1);
+    border: 1px solid #64ffda;
+    border-radius: 5px;
     color: white;
-}
-
-.btn-color-1:hover {
-    cursor: pointer;
-    background: rgb(0, 0, 0);
-}
-
-p {
-    color: rgb(85, 85, 85);
-}
-
-section {
+    font-size: 0.9rem;
     text-align: center;
-    padding-top: 4vh;
-    height: 96vh;
-    margin: fit-content;
-    box-sizing: border-box;
-    min-height: fit-content;
+    transition: all 0.3s ease;
+}
+
+.circuito-input input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #64ffda;
+}
+
+.voltaje-input input {
+    background-color: rgba(255, 100, 100, 0.1);
+    border: 1px solid #ff6464;
+}
+
+.voltaje-input input:focus {
+    box-shadow: 0 0 5px #ff6464;
+}
+
+.boton-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn-calculate {
+    background-color: #0a192f;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-calculate:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(100, 255, 218, 0.3);
+}
+
+.resultados-finales {
+    background-color: rgba(10, 25, 47, 0.85);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.resultados-finales p {
+    margin-bottom: 0.5rem;
+    color: #ccd6f6;
+}
+
+.calculando {
+    color: #64ffda;
+    font-style: italic;
+}
+
+.resultado-destacado {
+    font-size: 1.3rem;
+    color: #64ffda;
+    font-weight: 600;
+    margin-top: 1rem;
 }
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-top: 1px solid #ddd;
+    padding: 1.5rem 5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 2rem;
+}
+
+.footer-left p {
+    color: #ccd6f6;
+    font-size: 0.9rem;
 }
 
 .footer-right a {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    gap: 5px;
+    gap: 0.5rem;
+    color: #64ffda;
 }
 
-.footer-right img {
-    width: 24px;
-    height: 24px;
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .circuito-input {
+        width: 60px;
+    }
+    
+    footer {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
 }
